@@ -2,7 +2,8 @@
   "projects": {
     "default": "portfolio-adf71",
     "firebase projects:list": "bookingform-352b2",
-    "simphiwe.nene": "portfolio-adf71"
+    "simphiwe.nene": "portfolio-adf71",
+    "staging": "novaline-digital-za"
   },
   "targets": {},
   "etags": {}
