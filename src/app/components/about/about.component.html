@@ -1,0 +1,138 @@
+<div id="about" class="main-container flex column center-center" *ngIf='!isShowMore'>
+    <div class="height-70 width-70">
+        <p class="title">About US</p>
+        <p class="about">
+            <span class="about-anime">
+                NovaLine Digital specialises in helping service-based businesses grow through
+            </span>
+            <span class="about-anime">
+                high-impact <span class="colored-word">lead generation</span>, custom web development,
+            </span>
+            <span class="about-anime">
+                SEO, and results-driven digital marketing strategies.
+            </span>
+        </p>
+        <button mat-stroked-button class="btn" (click)="showMore()">Read More</button>
+    </div>
+</div>
+<div id="about" *ngIf='isShowMore' class="main-container full-height flex column center-center">
+    <div class="height-70 width-70">
+        <p class="title">About US</p>
+        <p class="about">
+            <span class="about-anime">
+                NovaLine Digital specialises in helping service-based businesses grow through
+            </span>
+            <span class="about-anime">s
+                high-impact <span class="colored-word">lead generation</span>, custom web development,
+            </span>
+            <span class="about-anime">
+                SEO, and results-driven digital marketing strategies.
+            </span>
+        </p>
+        <div>
+            <div class="flex column gap-1">
+                <div class="gap-1 flex col-start-center">
+                    <div class="flex column">
+                        <hr class="hr">
+                    </div>
+                    <p class="number-font">01</p>
+                    <p class="header-font">WHO WE ARE</p>
+                </div>
+                <div class="">
+
+                    <div class="flex gap-1 cards">
+                        <mat-card class="padding-20 half-width">
+                            <article>
+                                <p>
+                                    NovaLine Digital is a results-driven digital agency founded by two professionals
+                                    combining technology and legal expertise.
+                                </p>
+
+                                <p>
+                                    One founder holds a BCom in Management Information Systems from the University of
+                                    Zululand,
+                                    bringing technical and business insights. The other studied Law at the University of
+                                    Johannesburg,
+                                    adding compliance and strategic thinking.
+                                </p>
+
+                                <p>
+                                    Together, they help service-based businesses grow through lead generation, web
+                                    development,
+                                    SEO, and digital marketing — building systems that attract clients and drive
+                                    results.
+                                </p>
+                            </article>
+                        </mat-card>
+
+                        <mat-card class="flex-1">
+                            <img src="../../../assets/Novaline.svg" alt="Founders of NovaLine Digital">
+                        </mat-card>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="flex column gap-1">
+                <div class="gap-1 flex col-start-center">
+                    <div class="flex column">
+                        <hr class="hr">
+                    </div>
+                    <p class="number-font">02</p>
+                    <p class="header-font">MISSION</p>
+                </div>
+                <div class="flex gap-1 cards">
+                    <mat-card class="half-width padding-20">
+                        <div class="flex full-width center-center">
+                            <img class="passion-icon" src="../../../assets/innovation.svg" alt="Innovation Icon">
+                        </div>
+                        <h2 class="center-text">Innovation</h2>
+                        <p>
+                            Our mission is to harness technology creatively to solve real-world problems
+                            and help businesses thrive in an ever-changing digital landscape.
+                        </p>
+                        <p>
+                            We strive to build smart, scalable, and impactful solutions that empower businesses
+                            to reach their full potential.
+                        </p>
+                    </mat-card>
+
+                    <mat-card class="flex-1 padding-20">
+                        <div class="flex full-width center-center">
+                            <img class="passion-icon" src="../../../assets/decision.svg" alt="Impact Icon">
+                        </div>
+                        <h2 class="center-text">Impact</h2>
+                        <p>
+                            We aim to create meaningful digital experiences that drive growth, engagement,
+                            and measurable results for service-based businesses.
+                        </p>
+                        <p>
+                            Every project reflects our commitment to excellence, creativity, and client success.
+                        </p>
+                    </mat-card>
+                </div>
+
+            </div>
+            <div class="flex column gap-1">
+                <div class="gap-1 flex col-start-center">
+                    <div class="flex column">
+                        <hr class="hr">
+                    </div>
+                    <p class="number-font">03</p>
+                    <p class="header-font">VALUES</p>
+                </div>
+                <div class="skills-container width-95 flex column gap-05">
+                    <div *ngFor="let value of values" class="value-item flex gap-05">
+                        <img [src]="value.icon" alt="{{value.name}} Icon" class="value-icon">
+
+                        <div class="value-content flex column">
+                            <p class="value-name no-m">{{ value.name }}</p>
+                            <p class="value-description">{{ value.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,180 @@
+$primary-bg-color: #0c0c0c;
+$secondary-bg-color: #2a2a2a;
+$bg-color: #5c564c;
+$hover-color: #eb5939;
+
+
+p {
+    font-weight: 600;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.no-margin {
+    margin: 0;
+}
+.container {
+    height: 100%;
+}
+
+.main-container {
+    height: 105vh !important;
+}
+
+
+.initials {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $bg-color;
+    color: #0c0c0c;
+    position: fixed;
+    z-index: 1000;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+section {
+    // background-image: url('../../../assets/myphoto.jpg');
+    background-size: cover;
+    // width: 50%;
+    border-radius: 20px;
+}
+
+nav {
+    z-index: 100;
+
+    span {
+        display: none;
+    }
+}
+
+.menu {
+    font-weight: 700;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.icon {
+    height: 90%;
+    display: block !important;
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+// #about {
+//     margin-top: 80px;
+// }
+
+
+.welcome {
+
+    // width: 20%;
+    h1 {
+        font-weight: 600;
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+    }
+
+    span {
+        display: block;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.fixed {
+    position: fixed;
+    right: 25px
+}
+
+.relative {
+    position: relative;
+}
+
+.icons {
+    position: fixed;
+    bottom: 0px;
+    z-index: 100;
+}
+
+.color-change {
+    color: $hover-color;
+}
+
+.fav {
+    &:hover {
+        color: #eb5939;
+    }
+}
+
+.b-r {
+    bottom: 0;
+    right: 25px;
+}
+
+.margin-l {
+    margin-left: 20px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.menuIcon {
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+        color: $hover-color;
+    }
+}
+
+
+// @media only screen and (max-width: 750px) {
+//     h2 {
+//         font-size: larger;
+//     }
+
+// }
+
+@media only screen and (max-width: 550px) {
+    .main-container {
+        height: 45% !important;
+    }
+
+    .welcome {
+        h1 {
+            font-size: xx-large;
+            font-weight: 500;
+        }
+    }
+
+    .menuIcon {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+
+}

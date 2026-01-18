@@ -1,0 +1,81 @@
+<div #home class="main-container full-height flex gap column center-center">
+    <div class="width-95 height-95">
+        <header class=" full-width flex spacebetween ">
+            <div>
+                <div class="initials flex center-center">
+                    <!-- <h4 class="no-margin" (click)="toHome()">ND</h4> -->
+                    <img class="square" src="../../../assets/Novaline.svg" alt="" srcset="">
+                </div>
+            </div>
+            <nav>
+                <div class="fixed">
+                    <div class="menuIcon flex col-start-end" (click)="viewMenu()" id='menuIcon'>
+                        <mat-icon>menu</mat-icon>
+                    </div>
+                    <div class="nav" #menu>
+                        <div *ngFor="let menu of menuItems">
+                            <p class="menu" (click)="navigate(menu.name)" [class.color-change]="menu.clickedOn"
+                                routerLinkActive="link">{{menu.label}}</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="flex column full-width gap-2">
+            <div class="relative">
+                <div class="icons">
+                    <div class="m-b-80 flex column col-start-end gap-2 pic">
+                        <a [href]="icon.link" *ngFor="let icon of icons" target="_blank">
+                            <img class="pointer" [matTooltip]='icon.tooltip' [src]="icon.iconLink" [alt]="icon.name">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <section class="flex column flex-1 col-start-center">
+                <p class="no-m anime">NovaLine Digital</p>
+                <!-- <img src="../" alt="" srcset=""> -->
+                <div class="welcome flex center-center">
+                    <h1> <span class="anime">ADDING</span> <span class="anime">VALUE</span> <span
+                            class="anime color-change">TO BUSINESSES</span> <span class="anime"> SINCE</span> <span
+                            class="anime"> 2025</span></h1>
+                </div>
+            </section>
+            <section class="welcome flex column center-center">
+                <p>Ready to grow your business with predictable leads?</p>
+                <div class="flex center-center">
+                <button mat-raised-button class="btn">Book a Strategy Call</button>
+            </div>
+            </section>
+            <div class="full-height full-width" *ngIf="Isnavigated">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="fixed b-r flex gap-05">
+        <div class="flex center-center">
+            <small>{{likeCount}}</small>
+            <mat-icon class="pointer fav" (click)="countLike()">favorite</mat-icon>
+        </div>
+        <div class="flex center-center">
+            <small>1</small>
+            <mat-icon>visibility</mat-icon>
+        </div>
+
+    </div> -->
+
+    <!-- <div id="about" class=" flex column center-center"> -->
+        <!-- <app-about [isShowMore]="isShowMore" (isReadMore)="hideOthers($event)"></app-about> -->
+    <!-- </div> -->
+</div>
+
+<div id="about" class=" flex column center-center">
+    <app-about [isShowMore]="isShowMore" (isReadMore)="hideOthers($event)"></app-about>
+</div>
+<div id="projects" class="full-width" *ngIf="!isShowMore">
+    <app-projects></app-projects>
+</div>
+<div id="contacts" class=" full-width" *ngIf="!isShowMore">
+    <app-contacts></app-contacts>
+</div>

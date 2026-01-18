@@ -1,0 +1,26 @@
+<div id="services" class="main-container full-width flex column">
+    <div class="">
+        <div class="flex center-center">
+            <p class="title width-70">Services</p>
+        </div>
+        <div class="projects" *ngFor="let service of services">
+            <hr class="no-m">
+            <div class="middle"></div>
+            <div class="service flex center-center hover">
+                <a class="width-70 "  [href]="service.link" target="_blank">
+
+                    <div class="flex column">
+                        <!-- <h2 class="no-m">{{service.year}}</h2> -->
+                        <div>
+                            <h2>{{service.name}}</h2>
+                            <p>{{service.descriprion}}</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <hr class="no-margin-top">
+        </div>
+        <div class="cursor"></div>
+    </div>
+</div>

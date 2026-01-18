@@ -1,0 +1,48 @@
+<div #home class="main-container flex column center-center">
+    <div class="width-70 ">
+        <p class="">Reach Out</p>
+        <form [formGroup]="contactForm" class="flex column gap-1" *ngIf="!isSubmitted">
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input formControlName="fullName" type="text" matInput placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="contactForm.get('fullName')?.hasError('required')">
+                    Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" type="email" matInput placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="contactForm.get('email')?.hasError('pattern')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>CellPhone Number</mat-label>
+                <input formControlName="cellNumber" type="number" matInput placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="contactForm.get('cellNumber')?.hasError('required')">
+                    Cellphone number is <strong>required</strong>
+                </mat-error>
+                <!-- <mat-error *ngIf="contactForm.get('number')?.hasError('pattern')">
+                    Please enter a valid cellphone number
+                </mat-error> -->
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Leave a comment</mat-label>
+                <textarea formControlName="comment" matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+            <div class="flex center-center">
+                <button mat-raised-button class="btn" (click)="submit()">Submit</button>
+            </div>
+        </form>
+        <div class="feedback flex center-center" *ngIf="isSubmitted">
+            <p>Thank you for reaching out.</p>
+        </div>
+        <div class="contact flex spacebetween-center">
+            <p>gsimphiwe212@gmail.com</p>
+            <p>062 810 7203</p>
+        </div>
+    </div>
+</div>
